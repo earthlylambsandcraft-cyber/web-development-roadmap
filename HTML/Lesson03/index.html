@@ -3,29 +3,46 @@
     <head>
         <title>Login Page</title>
     </head>
-
 <body>
     <form>
-        <h1>Login</h1>
+        <h1>Sign in</h1>
 
         <label for="email">
             Email
         </label>
-
+        <br>
+        
         <input 
             id="email"
-            type="email">
+            type="email"
+            placeholder="Enter your email"
+            required>
+        
+            <br><br>
 
         <label for="password">
             Password
         </label>
+        <br>
 
-        <input 
+        <input
             id="password"
-            type="password">
+            type="password"
+            placeholder="Enter your password"
+            required>
+
+            <br><br>
 
         <button>Login</button>
-    </form>
 
+            <p>Don't have an account yet?</p>
+            <p>Sign up now</p>
+
+        <a href="signup.html">
+            Sign up
+        </a>
+
+
+    </form>
 </body>    
 </html>
