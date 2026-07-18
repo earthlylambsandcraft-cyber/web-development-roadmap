@@ -4,6 +4,21 @@ body {
 
 }
 
+
+header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    justify-content: center;
+
+}
+
+
+
 h1 {
 
     font-size: 32px;
@@ -28,7 +43,7 @@ section {
     
     background-color: white;
     
-    border: solid black;
+    border: 2px solid black;
     
     padding: 20px;
 
