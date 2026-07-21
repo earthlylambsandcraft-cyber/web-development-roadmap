@@ -1,6 +1,17 @@
+:root {
+
+    --primary-color: blueviolet;
+    --dark-color: #0f172a;
+    --accent-purple: #7C3AED;
+    --accent-cyan: #06B6D4;
+    --text-light: white;
+
+}
+
+
 body {
 
-    background-color: blueviolet;
+    background-color: var(--primary-color);
 
 }
 
@@ -13,9 +24,9 @@ header {
 
     justify-content: space-between;
 
-    background-color: black;
+    background-color: var(--dark-color);
     
-    color: white;
+    color: var(--text-light);
 
     position: sticky;
 
@@ -23,13 +34,19 @@ header {
 
     flex-wrap: wrap;
 
+    z-index:3;
+
+    height: 6.25rem;
+
+    position: relative;
+
 
 }
 
 
 header img {
 
-    width: 50px;
+    width: 3.2rem;
 
     object-fit:cover;
 
@@ -50,9 +67,9 @@ nav ul {
 
     display: flex;
 
-    font-size: 20px;
+    font-size: 1.25rem;
 
-    gap: 30px;
+    gap: 1.88rem;
 
     justify-content: space-around;
 
@@ -62,13 +79,13 @@ nav ul {
 
     position: absolute;
 
-    right: 30px;
+    right: 1.88rem;
 }
 
 
 nav a {
 
-    color: white;
+    color: var(--text-light);
 
     text-decoration: none;
 
@@ -79,45 +96,45 @@ nav a {
 
 nav a:hover {
 
-    color:aqua;
+    color:var(--accent-cyan);
 
 }
 
 
 button {
 
-    background-color: white;
+    background-color: var(--text-light);
 
     border: none;
 
-    padding: 15px 30px;
+    padding: 0.9rem 1.88rem;
 
-    font-size: 18px;
+    font-size: 1.1rem;
 
-    border-radius: 8px;
+    border-radius: 0.5rem;
 
     cursor: pointer;
 
     transition: background-color 0.3s,
                 transform 0.3s;
 
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0px 0.3rem 0.9rem rgba(0,0,0,0.3);
 
     position: absolute;
 
-    bottom: 30px;
+    bottom: 0.6rem;
 
-    right: 30px;
+    
 }
 
 button:hover {
 
 
-    background-color: blueviolet;
+    background-color: var(--accent-purple);
 
-    color: white;
+    color: var(--text-light);
 
-    transform: translateY(-3px);
+    transform: translateY(-4px) scale(1.05);
 
 }
 
@@ -137,7 +154,9 @@ button:hover {
 
     position: relative; 
 
-    padding: 60px;
+    padding: 3.75rem;
+
+    min-height: 75vh;
 
     background:
 
@@ -158,22 +177,74 @@ button:hover {
 
 .hero img {
 
-    width:220px;
+    width:13.75rem;
 
-    height:220px;
+    max-width: 100%;
+
+    height:auto;
 
     object-fit:cover;
 
     border-radius:50%;
 
-    box-shadow: 0 0 35px rgba(124,58,237,.6);
+    box-shadow: 0 0 2.18rem rgba(124,58,237,.6);
+
+    animation: float 4s ease-in-out infinite;
+
+    
+}
+
+.hero img,
+.hero h1,
+.hero p,
+.hero button {
+
+    position: relative;
+    z-index:2;
+
+}
+
+.glow {
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    z-index:1;
+
+}
+
+.glow-one {
+
+    top:-50px;
+    left:-50px;
+
+    background:#7C3AED;
+}
+
+
+.glow-two{
+
+    bottom:5rem;
+
+    right: 6.25rem;
+
+    background:#06B6D4;
+
+    z-index:1;
 }
 
 .sidebar {
 
     background-color: #1b1b1b ;
 
-    color: black;
+    color: var(--dark-color);
 
 }
 
@@ -181,14 +252,14 @@ aside ul {
 
      list-style: none;
 
-     font-size: 20px;
+     font-size: 1.25rem;
 
 }
 
 
 aside a {
 
-    color: white;
+    color: var(--text-light);
 
     text-decoration: none;
 
@@ -199,54 +270,64 @@ aside a {
 
 aside a:hover {
 
-    color: aqua;
+    color: var(--accent-cyan);
 
 }
 
 h1 {
 
-    font-size: 32px;
+    font-size: 2rem;
 
-    padding: 20px;
+    padding: 1.25rem;
 
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 
     text-align: center;
 }
 
 h2 {
 
-    font-size: 24px;
+    font-size: 1.5rem;
 
-    color: black;
+    color: var(--dark-color);
 }
 
 h3 {
 
-    font-size: 16px;
+    font-size: 1rem;
 
 }
 
 section {
     
     background-color: indigo;
-    
-    padding: 20px;
 
-    margin-bottom: 25px;
+    padding: 1.25rem;
 
+    margin-bottom: 1.6rem;
+
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
 
 }
 
 a {
 
-    color: black
+    color: var(--dark-color)
 
 }
 
 p {
 
-    font-size: 16px;
+    font-size: 1rem;
 
     
 }
@@ -259,8 +340,8 @@ ul {
 
 .footer {
 
-    background-color: black;
-    color:white;
+    background-color: var(--dark-color);
+    color:var(--text-light);
     text-align: center;
 }
 
@@ -272,6 +353,45 @@ ul {
         flex-direction: column;
 
         gap: 20px;
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        position: static;
+
+        gap: 15px;
+    }
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
 
     }
 
